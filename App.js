@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
 // import FlatListScore from './components/FlatListScore';
 // import SectionListScore from './components/SectionListScore.js';
 
