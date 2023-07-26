@@ -10,6 +10,10 @@ const HomeScreen = ({ navigation }) => {
                 style={styles.input}
                 onChangeText={setText}
                 value={text}
+                keyboardType="default"
+                multiline
+                numberOfLines={4}
+                textAlignVertical="top"
                 placeholder="Type here..."
             />
             <Button

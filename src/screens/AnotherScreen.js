@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
+
 const AnotherScreen = ({ route, navigation }) => {
     // const {message, data} = route.params;
     const {data} = route.params;
@@ -15,6 +16,16 @@ const AnotherScreen = ({ route, navigation }) => {
                 }}
                 title="Check to Another"
             />
+            <Button
+                onPress={() => {
+                    navigation.setOptions({
+                        headerTitle: 'Updated!',
+                    });
+                }}
+                title="Go to Another... again"
+            />
+
+
         </View>
     );
 };
