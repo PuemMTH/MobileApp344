@@ -5,7 +5,6 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
