@@ -1,53 +1,34 @@
-import { useState } from 'react';
-import { Button, StyleSheet, Text, View, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
-    const [text, setText] = useState("")
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Home Screen</Text>
-            <TextInput
-                style={styles.input}
-                onChangeText={setText}
-                value={text}
-                keyboardType="default"
-                multiline
-                numberOfLines={4}
-                textAlignVertical="top"
-                placeholder="Type here..."
-            />
-            <Button
-                onPress={() => {
-                    navigation.navigate("AnotherScreen", {
-                        // message: "Hello Word!",
-                        // data: ["Hello", "World!"]
-                        data: text
-                    })
-                }}
-                title='Send Message'
-            />
+            <Text style={styles.TextStyle}>Home Screen</Text>
+            <Button title="Next >>" onPress={() => navigation.navigate("Next")} />
+        
+            <TouchableOpacity
+                style={{ backgroundColor: '#FFB4B4', padding: 10, borderRadius: 10, marginTop: 20 }}
+                onPress={() => navigation.navigate("Next")}
+            >
+                <Text style={{ color: '#fff' }}>Next {'>>'} (TouchableOpacity)</Text>
+            </TouchableOpacity>
         </View>
-    )
-}
+    );
+};
+
+export default HomeScreen;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#FDF7C3',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    text: {
+    TextStyle: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 20,
-    },
-    input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-        width: '80%', 
-    },
-});
-
-export default HomeScreen;
+        marginBottom: 20,   
+        textDecorationLine: 'underline',
+    }
+})
